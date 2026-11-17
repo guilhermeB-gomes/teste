@@ -1,11 +1,17 @@
-# Álbum Romântico — Guilherme & Julya
-Abra `index.html` no navegador, ou publique a pasta em qualquer hospedagem estática.
-Como personalizar
-Tudo fica no topo de `js/script.js`, no objeto `CONFIG`:
-Data de início: `inicio` (AAAA-MM-DD). Os meses são calculados sozinhos.
-Fotos: coloque os arquivos em `assets/images/` e ajuste `src`, `legenda` e `h` (altura) em `fotos`. Sem o arquivo, aparece uma imagem provisória.
-Foto principal e final: `foto-principal.jpg` e `momento-03.jpg` (atributo `data-photo` no `index.html`).
-Linha do tempo, momentos e carta: `linhaDoTempo`, `momentos` e `carta`.
-Música: coloque `musica.mp3` em `assets/music/`. Ela só toca ao clicar no botão ♪.
-Cores: variáveis no início de `css/style.css`.
-Sem bibliotecas de JavaScript; só as fontes vêm do Google Fonts. Respeita `prefers-reduced-motion`.
+# Portfólio — Guilherme Barros Gomes
+
+HTML + CSS + JS puro, com GSAP e ScrollTrigger (cdnjs) e EmailJS (jsDelivr). Abra `index.html` no navegador. Precisa de internet para fontes e bibliotecas.
+
+## Onde editar
+Tudo em `js/config.js`:
+- **Links**: `links.github`, `links.linkedin`, `links.email`. Vazio = oculto.
+- **Projetos**: copie um objeto de `projetos`, ajuste nome, tipo (Front-end/Back-end/Full-stack), origem (Acadêmico/Pessoal), tecnologias, textos, `demo` e `codigo`. Links vazios desativam o botão. Imagens: coloque em `assets/projects/` e informe o nome em `imagem`. Os 4 projetos atuais são exemplos.
+- **Habilidades**: lista `skills`.
+- **Currículo**: coloque seu PDF em `docs/curriculo.pdf`.
+- **Experiência e formação**: funções `tl(...)` em `js/main.js`.
+
+## Formulário (EmailJS)
+Crie conta em emailjs.com, configure serviço e template com os campos `nome`, `email`, `assunto`, `mensagem` e preencha `emailjs` em `config.js`. A Public Key é pública por design. Nunca use a Private Key no front-end. Sem as chaves, o formulário valida e avisa que não está configurado.
+
+## Notas
+Respeita `prefers-reduced-motion`. Cursor personalizado e tilt só em dispositivos com mouse.

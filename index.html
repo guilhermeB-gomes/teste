@@ -1,87 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guilherme & Julya — Nosso álbum</title>
-<meta name="description" content="Um álbum de memórias de Guilherme & Julya.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guilherme Barros Gomes — Desenvolvedor Web</title>
+<meta name="description" content="Portfólio de Guilherme Barros Gomes, estudante de Análise e Desenvolvimento de Sistemas na FATEC Tatuí.">
+<meta property="og:title" content="Guilherme Barros Gomes — Desenvolvedor Web"><meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="is-loading">
-<a class="skip" href="#historia">Ir para o conteúdo</a>
-
-<div id="loader" aria-live="polite"><svg viewBox="0 0 32 29" class="loader-heart" aria-hidden="true"><path d="M16 28.5C6 20 1 15 1 9.200 1 4.900 4.400 1.500 8.600 1.500c3 0 5.600 1.700 7.400 4.300 1.800-2.600 4.400-4.300 7.400-4.300C27.600 1.500 31 4.900 31 9.200c0 5.800-5 10.800-15 19.300z"/></svg><p>Abrindo nosso álbum…</p></div>
-
-<div id="progress" aria-hidden="true"></div>
-<canvas id="petals" aria-hidden="true"></canvas>
+<body class="loading">
+<a class="skip" href="#sobre">Ir para o conteúdo</a>
+<div id="pre"><span>GB</span><i></i></div>
+<div id="bar"></div><div id="dot"></div><div id="ring"></div>
 
 <header class="nav">
-  <a href="#inicio" class="brand">G <span>&</span> J</a>
-  <nav aria-label="Principal">
-    <a href="#historia">Nossa história</a><a href="#galeria">Fotos</a><a href="#momentos">Momentos</a><a href="#carta">Carta</a>
+  <a href="#inicio" class="logo">GB<span>.</span></a>
+  <nav id="menu" aria-label="Principal">
+    <a href="#sobre">Sobre</a><a href="#skills">Skills</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
   </nav>
-  <button id="music" aria-pressed="false" aria-label="Ativar música de fundo" title="Música">♪</button>
+  <button id="theme" aria-label="Alternar tema claro e escuro"><span></span></button>
+  <button id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
 </header>
 
 <main>
 <section id="inicio" class="hero">
-  <div class="hero-bg" data-parallax="0.25"></div>
-  <div class="hero-card glass">
-    <img id="heroImg" class="hero-photo" alt="Guilherme e Julya" data-photo="foto-principal.jpg" width="520" height="620">
-    <div class="hero-text">
-      <h1>Guilherme <em>&</em> Julya</h1>
-      <p>Cada momento ao seu lado se transforma em uma lembrança eterna.</p>
-      <a href="#historia" class="btn">Reviver nossas memórias</a>
+  <div class="shape s1" data-p="-80"></div><div class="shape s2" data-p="-160"></div><canvas id="parts" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <div class="hero-txt">
+      <p class="kicker">OLÁ, EU SOU</p>
+      <h1 class="grad">GUILHERME BARROS</h1>
+      <p class="role"><span id="typed"></span><b class="caret">|</b></p>
+      <p class="big">Transformando ideias em experiências digitais.</p>
+      <p class="muted">Desenvolvo soluções digitais combinando criatividade, tecnologia e aprendizado contínuo.</p>
+      <div class="btns">
+        <a class="btn pri mag" href="#projetos">Conheça meus projetos</a>
+        <a class="btn mag" href="#contato">Entre em contato</a>
+        <a class="btn mag" href="docs/curriculo.pdf" download>Baixar currículo em PDF</a>
+      </div>
     </div>
+    <div class="code glass" aria-hidden="true"><div class="dots"><i></i><i></i><i></i></div><pre id="codeview"></pre></div>
+  </div>
+  <a class="scroll" href="#sobre" aria-label="Rolar para baixo"><i></i></a>
+</section>
+
+<section id="sobre" class="sec">
+  <h2 data-r>Conheça um pouco sobre mim.</h2>
+  <div class="two">
+    <div data-r>
+      <p>Minha jornada na tecnologia é marcada pela curiosidade, dedicação e vontade constante de aprender. Durante minha formação em Análise e Desenvolvimento de Sistemas, venho desenvolvendo projetos acadêmicos e pessoais, explorando diferentes tecnologias e aprimorando minhas habilidades em programação, desenvolvimento web e bancos de dados.</p>
+      <p class="muted">Tenho experiência administrativa em estágio e busco minha primeira oportunidade na área de tecnologia.</p>
+    </div>
+    <ul class="facts" data-r>
+      <li><b>FATEC Tatuí</b><span>Análise e Desenvolvimento de Sistemas · 2025–2026</span></li>
+      <li><b>Estágio</b><span>Prefeitura Municipal de Quadra</span></li>
+      <li><b>Interesse</b><span>Desenvolvimento web, software e bancos de dados</span></li>
+      <li><b>Objetivo</b><span>Oportunidade na área de tecnologia</span></li>
+    </ul>
   </div>
 </section>
 
-<section id="historia" class="wrap">
-  <h2 class="reveal">Nossa história</h2>
-  <p class="lead reveal" id="startLine"></p>
-  <ol class="timeline" id="timeline"></ol>
+<section id="skills" class="sec"><h2 data-r>Habilidades técnicas</h2><p class="muted c" data-r>Níveis indicam conhecimento declarado, não percentuais de domínio.</p><div class="grid" id="skills-grid"></div></section>
+
+<section id="projetos" class="sec"><h2 data-r>Projetos que transformam ideias em soluções.</h2>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar projetos"></div>
+  <div class="grid proj" id="proj-grid"></div>
 </section>
 
-<section id="galeria" class="wrap wide">
-  <h2 class="reveal">Nosso álbum de fotografias</h2>
-  <div class="masonry" id="masonry"></div>
-</section>
+<section id="experiencia" class="sec"><h2 data-r>Experiência profissional</h2><ol class="tl" id="exp"></ol></section>
+<section id="formacao" class="sec"><h2 data-r>Formação acadêmica</h2><ol class="tl" id="edu"></ol></section>
 
-<section id="momentos" class="wrap wide">
-  <h2 class="reveal">Momentos especiais</h2>
-  <p class="lead reveal">Toque em um cartão para abrir a lembrança.</p>
-  <div class="cards" id="cards"></div>
-</section>
-
-<section id="carta" class="wrap letter-sec">
-  <h2 class="reveal">Uma carta para você</h2>
-  <button class="envelope" id="envelope" aria-expanded="false" aria-controls="letter">
-    <span class="flap"></span><span class="seal">♥</span><span class="env-label">Abrir carta</span>
-  </button>
-  <article class="letter" id="letter" aria-live="polite"><p id="letterText"></p><p class="sign" id="letterSign"></p></article>
-</section>
-
-<section id="fim" class="finale">
-  <div class="hero-bg" data-parallax="0.15"></div>
-  <img id="finalImg" class="final-photo" alt="Guilherme e Julya juntos" data-photo="momento-03.jpg" width="360" height="440">
-  <h2 class="reveal">Nossa história ainda está apenas começando.</h2>
-  <p class="sign reveal">Com amor, Guilherme.</p>
-  <div class="hearts" aria-hidden="true"><i>♥</i><i>♥</i><i>♥</i><i>♥</i><i>♥</i></div>
+<section id="contato" class="sec"><h2 data-r>Tem um projeto em mente ou uma oportunidade?</h2>
+  <p class="muted c" data-r>Estou aberto a oportunidades, novos desafios e conexões na área de tecnologia.</p>
+  <div class="two">
+    <div class="links" id="links" data-r></div>
+    <form id="form" class="glass" novalidate data-r>
+      <label>Nome<input name="nome" required autocomplete="name"><small></small></label>
+      <label>E-mail<input name="email" type="email" required autocomplete="email"><small></small></label>
+      <label>Assunto<input name="assunto" required><small></small></label>
+      <label>Mensagem<textarea name="mensagem" rows="5" required></textarea><small></small></label>
+      <button class="btn pri mag" type="submit">Enviar mensagem</button>
+      <p id="status" role="status"></p>
+    </form>
+  </div>
 </section>
 </main>
 
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto em tela cheia" hidden>
-  <button class="lb-close" aria-label="Fechar">×</button>
-  <button class="lb-nav prev" aria-label="Foto anterior">‹</button>
-  <figure><img alt=""><figcaption></figcaption></figure>
-  <button class="lb-nav next" aria-label="Próxima foto">›</button>
-</div>
+<footer>
+  <div><b>Guilherme Barros Gomes</b><p class="muted">Desenvolvido com dedicação, criatividade e tecnologia.</p></div>
+  <nav aria-label="Rodapé"><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a><a data-link="github" href="#">GitHub</a><a data-link="linkedin" href="#">LinkedIn</a></nav>
+  <p class="muted">© <span id="year"></span> · <a href="#inicio">Voltar ao topo ↑</a></p>
+</footer>
 
-<button id="toTop" aria-label="Voltar ao topo">↑</button>
-<audio id="audio" loop preload="none"><source src="assets/music/musica.mp3" type="audio/mpeg"></audio>
-<script src="script.js"></script>
+<a id="fab" class="btn pri" href="#contato">Contato</a>
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" hidden><div class="m-box glass"><button id="m-close" aria-label="Fechar">×</button><div id="m-body"></div></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
