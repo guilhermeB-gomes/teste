@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guilherme & Julya — Nosso álbum</title>
+<meta name="description" content="Um álbum de memórias de Guilherme & Julya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+<a class="skip" href="#historia">Ir para o conteúdo</a>
+
+<div id="loader" aria-live="polite"><svg viewBox="0 0 32 29" class="loader-heart" aria-hidden="true"><path d="M16 28.5C6 20 1 15 1 9.200 1 4.900 4.400 1.500 8.600 1.500c3 0 5.600 1.700 7.400 4.300 1.800-2.600 4.400-4.300 7.400-4.300C27.600 1.500 31 4.900 31 9.200c0 5.800-5 10.800-15 19.300z"/></svg><p>Abrindo nosso álbum…</p></div>
+
+<div id="progress" aria-hidden="true"></div>
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a href="#inicio" class="brand">G <span>&</span> J</a>
+  <nav aria-label="Principal">
+    <a href="#historia">Nossa história</a><a href="#galeria">Fotos</a><a href="#momentos">Momentos</a><a href="#carta">Carta</a>
+  </nav>
+  <button id="music" aria-pressed="false" aria-label="Ativar música de fundo" title="Música">♪</button>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="hero-bg" data-parallax="0.25"></div>
+  <div class="hero-card glass">
+    <img id="heroImg" class="hero-photo" alt="Guilherme e Julya" data-photo="foto-principal.jpg" width="520" height="620">
+    <div class="hero-text">
+      <h1>Guilherme <em>&</em> Julya</h1>
+      <p>Cada momento ao seu lado se transforma em uma lembrança eterna.</p>
+      <a href="#historia" class="btn">Reviver nossas memórias</a>
+    </div>
+  </div>
+</section>
+
+<section id="historia" class="wrap">
+  <h2 class="reveal">Nossa história</h2>
+  <p class="lead reveal" id="startLine"></p>
+  <ol class="timeline" id="timeline"></ol>
+</section>
+
+<section id="galeria" class="wrap wide">
+  <h2 class="reveal">Nosso álbum de fotografias</h2>
+  <div class="masonry" id="masonry"></div>
+</section>
+
+<section id="momentos" class="wrap wide">
+  <h2 class="reveal">Momentos especiais</h2>
+  <p class="lead reveal">Toque em um cartão para abrir a lembrança.</p>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section id="carta" class="wrap letter-sec">
+  <h2 class="reveal">Uma carta para você</h2>
+  <button class="envelope" id="envelope" aria-expanded="false" aria-controls="letter">
+    <span class="flap"></span><span class="seal">♥</span><span class="env-label">Abrir carta</span>
+  </button>
+  <article class="letter" id="letter" aria-live="polite"><p id="letterText"></p><p class="sign" id="letterSign"></p></article>
+</section>
+
+<section id="fim" class="finale">
+  <div class="hero-bg" data-parallax="0.15"></div>
+  <img id="finalImg" class="final-photo" alt="Guilherme e Julya juntos" data-photo="momento-03.jpg" width="360" height="440">
+  <h2 class="reveal">Nossa história ainda está apenas começando.</h2>
+  <p class="sign reveal">Com amor, Guilherme.</p>
+  <div class="hearts" aria-hidden="true"><i>♥</i><i>♥</i><i>♥</i><i>♥</i><i>♥</i></div>
+</section>
+</main>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto em tela cheia" hidden>
+  <button class="lb-close" aria-label="Fechar">×</button>
+  <button class="lb-nav prev" aria-label="Foto anterior">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-nav next" aria-label="Próxima foto">›</button>
+</div>
+
+<button id="toTop" aria-label="Voltar ao topo">↑</button>
+<audio id="audio" loop preload="none"><source src="assets/music/musica.mp3" type="audio/mpeg"></audio>
+<script src="script.js"></script>
+</body>
+</html>
